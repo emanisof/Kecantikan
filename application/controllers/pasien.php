@@ -1,5 +1,5 @@
 <?php if(!defined('BASEPATH')) exit('Direct Access Script NOt Allowed');
-
+// Just New Comment
 class Pasien extends CI_Controller {
 
 	public function __construct()
