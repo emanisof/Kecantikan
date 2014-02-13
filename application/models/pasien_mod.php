@@ -101,7 +101,19 @@ class Pasien_Mod extends CI_Model {
 	{
 		return $this->db->count_all('pasien'); 
 	}
-
+	function save_checkup()
+	{
+		$data = array (
+			'id_pasien' => $this->input->post('id_pasien'),
+			'id_pegawai' => $this->input->post('pegawai'),
+			'tanggal' => date('Y/m/d'),
+			'keluhan' => $this->input->post('keluhan'),
+			'analisa' => $this->input->post('analisa'),
+			'tindakan' => $this->input->post('tindakan')
+		);
+		
+		$this->db->insert('checkup',$data);
+	}
 	
 }
 // end of file : Application/Models/pasien_mod.php

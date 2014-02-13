@@ -8,6 +8,20 @@
 		<link rel="stylesheet"  href="<?php echo CSS.'jasny-bootstrap.css'; ?>" >
 		<link rel="stylesheet"  href="<?php echo CSS.'jquery-ui-1.10.4.custom.min.css'; ?>" >
 		<link rel="stylesheet"  href="<?php echo CSS.'datepicker.css'; ?>" >
+		<!-- Upload File Image jQuery UI -->
+		<!-- Bootstrap styles -->
+		<!-- <link rel="stylesheet" href="ui/bootstrap.min.css"> -->
+		<!-- Generic page styles -->
+		<link rel="stylesheet" href="<?php echo CSS.'ui/style.css'; ?>">
+		<!-- blueimp Gallery styles -->
+		<link rel="stylesheet" href="<?php echo CSS.'ui/blueimp-gallery.min.css'; ?>">
+		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+		<link rel="stylesheet" href="<?php echo CSS.'ui/jquery.fileupload.css'; ?>">
+		<link rel="stylesheet" href="<?php echo CSS.'ui/jquery.fileupload-ui.css'; ?>">
+		<!-- CSS adjustments for browsers with JavaScript disabled -->
+		<noscript><link rel="stylesheet" href="<?php echo CSS.'ui/jquery.fileupload-noscript.css';?>"></noscript>
+		<noscript><link rel="stylesheet" href="<?php echo CSS.'ui/jquery.fileupload-ui-noscript.css';?>"></noscript>
+		<! -- End Upload File Image --> 
 		<title><?php echo $template['title']; ?></title>
 	</head>
 	<body>
@@ -81,10 +95,45 @@
 		</div>
 	<script type="text/javascript" src="<?php echo JS.'jquery-1.10.2.js'; ?>"></script>
 	<script type="text/javascript" src="<?php echo JS.'jquery-ui-1.10.4.custom.min.js'; ?>"></script>
-	<script type="text/javascript" src="<?php echo JS.'bootstrap.js'; ?>"></script>
-	<script type="text/javascript" src="<?php echo JS.'jasny-bootstrap.js'; ?>"></script>
+	<script src="<?php echo JS.'ui/bootstrap.min.js'; ?>"></script>
+	<!-- <script type="text/javascript" src="<?php echo JS.'bootstrap.js'; ?>"></script> -->
+	<!-- <script type="text/javascript" src="<?php echo JS.'jasny-bootstrap.js'; ?>"></script> -->
 	<script type="text/javascript"src="<?php echo JS.'bootstrap-datepicker.js';?>"></script>
 	<script type="text/javascript" src="<?php echo JS.'jquery.confirm.min.js'; ?>"></script>
+	<!-- JS For Image Upload --> 
+	<!-- <script src="ui/jquery.min.js"></script> -->
+	<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+	<script type="text/javascript" src="<?php echo JS.'/ui/vendor/jquery.ui.widget.js'; ?>"></script>
+	<!-- The Templates plugin is included to render the upload/download listings -->
+	<script src="<?php echo JS.'ui/tmpl.min.js'; ?>"></script>
+	<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+	<script src="<?php echo JS.'ui/load-image.min.js'; ?>"></script>
+	<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+	<script src="<?php echo JS.'ui/canvas-to-blob.min.js';?>"></script>
+	<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+	<!-- <script src="ui/bootstrap.min.js"></script> -->
+	<!-- blueimp Gallery script -->
+	<script src="<?php echo JS.'ui/jquery.blueimp-gallery.min.js';?>"></script>
+	<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+	<script src="<?php echo JS.'ui/jquery.iframe-transport.js'; ?>"></script>
+	<!-- The basic File Upload plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload.js';?>"></script>
+	<!-- The File Upload processing plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload-process.js';?>"></script>
+	<!-- The File Upload image preview & resize plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload-image.js';?>"></script>
+	<!-- The File Upload audio preview plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload-audio.js';?>"></script>
+	<!-- The File Upload video preview plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload-video.js';?>"></script>
+	<!-- The File Upload validation plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload-validate.js';?>"></script>
+	<!-- The File Upload user interface plugin -->
+	<script src="<?php echo JS.'ui/jquery.fileupload-ui.js'; ?>"></script>
+	<!-- The main application script -->
+	<script src="<?php echo JS.'ui/main.js'; ?>"></script>
+
+	<!-- End Of JS Image Upload --> 
 	
 	<script type="text/javascript">
 		 $(".input-group.date").datepicker({ autoclose: true, todayHighlight: true });
@@ -166,5 +215,5 @@
 			});
 		/* End Of Add Another Field */
 	</script>
-	</body>
+</body>
 </html>

@@ -79,19 +79,25 @@ class Pasien extends CI_Controller {
 			array('field'=>'tindakan','label'=>'Tindakan Medis','rules'=>'required')
 		);
 		$this->form_validation->set_rules($config);
-		if(!$this->form_validation->run()== FALSE)
+		if(!$this->form_validation->run() == FALSE)
 		{
-			//$this->pasien_mod->save_ceckup();
+			$this->pasien_mod->save_checkup();
+			$pesan['simpan_msg'] = "Data Checkup Tersimpan";
+			$this->template
+				->title('SIMPAN DATA')
+				->set_layout('default-in')
+				->build('pages/success',$pesan);
 		 
-		}
-		$data['pasien'] = $this->pasien_mod->index();
-		$data['pegawai'] = $this->pegawai_mod->index();
-		$data['judul'] = 'Check up Pasien';
+		}else{
+			$data['pasien'] = $this->pasien_mod->index();
+			$data['pegawai'] = $this->pegawai_mod->index();
+			$data['judul'] = 'Check up Pasien';
 		
-		$this->template
-			->title('Check Up Pasien')
-			->set_layout('default-in')
-			->build('forms/checkup',$data);
+			$this->template
+				->title('Check Up Pasien')
+				->set_layout('default-in')
+				->build('forms/checkup',$data);
+		}
 	}
 	
 	// Cari Data Dari No KArtu 
